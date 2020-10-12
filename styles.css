@@ -1,0 +1,22 @@
+/* GLOBAL VARIABLES */
+
+:root {
+    --main: #1DB954;
+    --secondary: #191414;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVIGATION */
+.nav {
+    background-color: var(--main);
+    height: 5vh;
+}
+
+.nav-header {
+    font-family: 'Prompt', sans-serif;
+    margin: 0;
+}
