@@ -1,5 +1,8 @@
-/* GLOBAL VARIABLES */
+/* IMPORTED GOOGLE FONT FAMILIES */
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Prompt', sans-serif; */
 
+/* GLOBAL VARIABLES */
 :root {
     --main: #1DB954;
     --secondary: #191414;
@@ -12,11 +15,38 @@ html, body {
 
 /* NAVIGATION */
 .nav {
+    overflow: hidden;
     background-color: var(--main);
-    height: 5vh;
+    position: relative;
 }
 
-.nav-header {
+.nav #hamburger-links {
+    display: none;
+}
+
+.nav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    display: block;
+}
+
+.nav a.icon {
+    background: var(--main);
+    color: var(--secondary);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* .nav a:hover {
+    background-color: #ddd;
+    color: black;
+} */
+
+.moodify-nav {
     font-family: 'Prompt', sans-serif;
-    margin: 0;
 }
