@@ -50,3 +50,29 @@ html, body {
 .moodify-nav {
     font-family: 'Prompt', sans-serif;
 }
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(https://images.unsplash.com/photo-1458560871784-56d23406c091?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2767&q=80);
+    background-size: cover;
+    height: 100vh;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-button {
+    background: transparent;
+    border: 1px solid var(--main);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.moodify-hero {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
