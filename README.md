@@ -7,11 +7,11 @@
 |  Day | Deliverable | Status
 |---|---| ---|
 |Day 1| Project Description | Complete
-|Day 1| Wireframes / Priority Matrix / Timeline | Incomplete
+|Day 1| Wireframes / Priority Matrix / Timeline | Complete
 |Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Day 4| MVP & Bug Fixes | Incomplete
 |Day 5| Final Touches | Incomplete
-|Day 6| Present | Incomplete
+|Day 6| Deliver | Incomplete
 
 
 ## Project Description
@@ -25,7 +25,8 @@ In a single page application, Moodify is going to consume information about Spot
 - [Desktop](https://www.dropbox.com/s/01sj4k2spj6e3e8/desktop.pdf?dl=0)
 
 ## Time/Priority Matrix 
- 
+- [MVP](https://res.cloudinary.com/dpjdvsigb/image/upload/v1602465106/moodify/moodify-mvp_l7n4mi.jpg)
+- [Post MVP](https://res.cloudinary.com/dpjdvsigb/image/upload/v1602465106/moodify/moodify-post-mvp_mbjtk0.jpg)
 
 ### MVP/PostMVP - 5min
 
@@ -54,7 +55,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 | D | Navigation CSS | M | 2hr | -hr |
 | E | Aggressive HTML | H | 1hr | -hr |
 | F | Aggressive CSS | M | 3hr | -hr | 
-| G | Whimsical HTML | M | 1hr | 2hr |
+| G | Whimsical HTML | H | 1hr | 2hr |
 | H | Whimsical CSS | M | 2hr | 2hr | 
 | I | Spooky HTML | H | 1hr | -hr |
 | J | Spooky CSS | M | 2hr | -hr |
