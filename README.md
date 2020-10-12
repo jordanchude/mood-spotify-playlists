@@ -47,7 +47,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 #### MVP
 | Letter | Component | Priority | Estimated Time | Actual Time |
-| --- | --- | :---: |  :---: | :---: | :---: |
+| --- | --- | :---: |  :---: | :---: |
 | A | UI/UX Research | H | 1hr | .5hr |
 | B | Wireframing | H | 2hr | 3hr |
 | C | Navigation HTML | H | 1hr | -hr |
