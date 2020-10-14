@@ -11,6 +11,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 /* NAVIGATION */
@@ -70,12 +71,14 @@ html, body {
     border-style: none;
     border-radius: 20px;
     color: var(--secondary);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    text-decoration: none;
     padding: 10px;
 }
 
 .moodify-hero {
     font-family: 'Prompt', sans-serif;
-    margin: 0;
 }
 
 #aggressive, #spooky {
@@ -85,6 +88,10 @@ html, body {
     align-items: center;
     flex-direction: column;
     height: 50vh;
+}
+
+.playlist-intro {
+    text-align: center;
 }
 
 .playlist-header {
@@ -154,4 +161,67 @@ html, body {
 
 .footer-text {
     margin: 0;
+}
+
+/* TABLET MEDIA QUERY */
+@media only screen and (min-width: 768px) {
+    .playlist-photo {
+        width: 210px;
+    }
+
+    .playlist {
+        font-size: 15px;
+    }
+}
+
+/* DESKTOP MEDIA QUERY */
+
+@media only screen and (min-width: 992px) {
+    
+    .hero {
+        height: 90vh;
+    }
+
+    .moodify-hero {
+        font-size: 100px;
+        margin: 0;
+    }
+
+    .hero-button {
+        font-size: 20px;
+    }
+
+    #aggressive, #spooky {
+        align-items: center;
+        background: var(--secondary);
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 100vh;
+    }
+
+    #whimsical {
+        background: var(--main);
+        color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 100vh;
+    }
+
+    .playlist {
+        height: 80vh;
+        width: 50vh;
+        flex-grow: 0;
+    }
+
+    .playlist-photo {
+        width: 500px;
+    }
+
+    .playlist-header, .playlist-header-light {
+        transform: scale(1.5);
+        margin: 30px;
+    }
 }

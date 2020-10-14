@@ -50,9 +50,9 @@
     <section class="hero">
         <div class="hero-content">
             <h1 class="moodify-hero">Moodify</h1>
-            <button href="#aggressive" class="hero-button">Aggressive</button>
-            <button href="#whimsical" class="hero-button">Whimsical</button>
-            <button href="#spooky" class="hero-button">Spooky</button>
+            <a href="#aggressive" class="hero-button">Aggressive</a>
+            <a href="#whimsical" class="hero-button">Whimsical</a>
+            <a href="#spooky" class="hero-button">Spooky</a>
         </div>
     </section>
 
@@ -60,9 +60,11 @@
     <div id="app">
         <!-- Aggressive -->
         <section id="aggressive">
-            <h1 class="playlist-header">Aggressive</h1>
-            <h4 class="playlist-header">Get Hype</h2>
-            <img class="playlist-photo" src="https://res.cloudinary.com/dpjdvsigb/image/upload/v1602631355/moodify/philipp-pilz-QZ2EQuPpQJs-unsplash_nsfb4g.png" alt="aggressive-wolf">
+            <div class="playlist-intro">
+                <h1 class="playlist-header">Aggressive</h1>
+                <h4 class="playlist-header">Get Hype</h2>
+                <img class="playlist-photo" src="https://res.cloudinary.com/dpjdvsigb/image/upload/v1602631355/moodify/philipp-pilz-QZ2EQuPpQJs-unsplash_nsfb4g.png" alt="aggressive-wolf">
+            </div>
             <div class="playlist dark">
                 <div v-for="song in aggressive">
                     <p class="song-dark">"{{song.title}}" - {{song.artist}}</p>
@@ -71,9 +73,11 @@
         </section>
 
         <section id="whimsical">
-            <h1 class="playlist-header-light">Whimsical</h1>
-            <h4 class="playlist-header-light">Get Loose</h2>
-            <img class="playlist-photo" src="https://res.cloudinary.com/dpjdvsigb/image/upload/v1602631215/moodify/daniel-maas-RR-FwGB6PEU-unsplash_ccf2p3.png" alt="whimsical-dog">
+            <div class="playlist-intro">
+                <h1 class="playlist-header-light">Whimsical</h1>
+                <h4 class="playlist-header-light">Get Loose</h2>
+                <img class="playlist-photo" src="https://res.cloudinary.com/dpjdvsigb/image/upload/v1602631215/moodify/daniel-maas-RR-FwGB6PEU-unsplash_ccf2p3.png" alt="whimsical-dog">
+            </div>
             <div class="playlist light">
                 <div v-for="song in whimsical">
                     <p class="song-light">"{{song.title}}" - {{song.artist}}</p>
@@ -82,9 +86,11 @@
         </section>
 
         <section id="spooky">
-            <h1 class="playlist-header">Spooky</h1>
-            <h4 class="playlist-header">Get Spooked</h2>
-            <img class="playlist-photo" src="https://res.cloudinary.com/dpjdvsigb/image/upload/v1602631416/moodify/sarah-boudreau-Uy70zMCw-4c-unsplash_dwtuth.png" alt="spooky-dog">
+            <div class="playlist-intro">
+                <h1 class="playlist-header">Spooky</h1>
+                <h4 class="playlist-header">Get Spooked</h2>
+                <img class="playlist-photo" src="https://res.cloudinary.com/dpjdvsigb/image/upload/v1602631416/moodify/sarah-boudreau-Uy70zMCw-4c-unsplash_dwtuth.png" alt="spooky-dog">
+            </div>
             <div class="playlist dark">
                 <div v-for="song in spooky">
                     <p class="song-dark">"{{song.title}}" - {{song.artist}}</p>
