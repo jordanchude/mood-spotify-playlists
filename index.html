@@ -55,5 +55,20 @@
             <button href="#spooky" class="hero-button">Spooky</button>
         </div>
     </section>
+
+    <!-- PLAYLISTS -->
+    <div id="app">
+        <!-- Aggressive -->
+        <section id="aggressive">
+            <h1 class="playlist-header-dark">Aggressive</h1>
+            <h4 class="playlist-subheader-dark">Get Hype</h2>
+            <img class="playlist-photo" src="./assets/original/philipp-pilz-QZ2EQuPpQJs-unsplash.png" alt="aggressive-wolf">
+            <div class="playlist">
+                <div v-for="song in aggressive">
+                    <p class="song-dark">{{song.title}} - {{song.artist}}</p>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
