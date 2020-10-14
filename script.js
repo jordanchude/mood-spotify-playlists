@@ -70,16 +70,16 @@ function showHamburgerLinks() {
         .then(response => response.json())
         .then(data => {
           let spookyFeed = data.feed.entry.map(entry => {
-            if (entry.gsx$danceability.$t < 0.6 && entry.gsx$energy.$t < 0.8) {
+            if (entry.gsx$valence.$t < 0.5 && entry.gsx$energy.$t < 0.7 && entry.gsx$danceability.$t < .75) {
               return {
                 title: entry.gsx$songtitle.$t,
                 artist: entry.gsx$artist.$t,
-                energy: entry.gsx$energy.$t
+                valence: entry.gsx$valence.$t
               }
             } 
           })
           .filter(entry => entry !== undefined);
-          spookyFeed = spookyFeed.sort((a, b) => a.energy > b.energy ? 1: -1)
+          spookyFeed = spookyFeed.sort((a, b) => a.valence > b.valence ? 1: -1)
           this.spooky = spookyFeed;
         })
       }

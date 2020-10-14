@@ -69,7 +69,7 @@ html, body {
     background: transparent;
     border: 1px solid var(--main);
     border-radius: 20px;
-    color: white;
+    color: var(--secondary);
     text-shadow: 1px 1px var(--main);
     padding: 10px;
 }
