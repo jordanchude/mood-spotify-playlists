@@ -7,7 +7,8 @@ function showHamburgerLinks() {
       links.style.display = "block";
     }
   }
-// VUE INSTANCE TO HOLD JSON DATA FOR RENDER
+
+// VUE INSTANCE
   const app = new Vue({
     el: '#app',
     data: {
@@ -27,10 +28,9 @@ function showHamburgerLinks() {
     },
     methods: {
       aggressiveSongs: function(){
-        fetch('https://spreadsheets.google.com/feeds/list/1H5S6Vc-gCOCKLvQmfjfJmG2THtDb5Z_LQGaZJpWZQ4c/1/public/values?alt=json')
+        fetch(this.URL)
         .then(response => response.json())
         .then(data => {
-          // entry.gsx$acousticness.$t < 0.1 && entry.gsx$danceability.$t < 0.6
           let aggressiveFeed = data.feed.entry.map(entry => {
             if (entry.gsx$energy.$t > 0.65 && entry.gsx$valence.$t < 0.5) {
               return {
@@ -51,16 +51,17 @@ function showHamburgerLinks() {
         fetch('https://spreadsheets.google.com/feeds/list/1H5S6Vc-gCOCKLvQmfjfJmG2THtDb5Z_LQGaZJpWZQ4c/1/public/values?alt=json')
         .then(response => response.json())
         .then(data => {
-          const whimsicalFeed = data.feed.entry.map(entry => {
-            console.log("scanned");
-            if (entry.gsx$danceability.$t < 0.7) {
+          let whimsicalFeed = data.feed.entry.map(entry => {
+            if (entry.gsx$valence.$t > 0.35 && entry.gsx$instrumentalness.$t > 0 && entry.gsx$acousticness.$t > .1) {
               return {
                 title: entry.gsx$songtitle.$t,
-                artist: entry.gsx$artist.$t
+                artist: entry.gsx$artist.$t,
+                valence: entry.gsx$valence.$t
               }
             } 
           })
           .filter(entry => entry !== undefined);
+          whimsicalFeed = whimsicalFeed.sort((a, b) => b.valence > a.valence ? 1: -1);
           this.whimsical = whimsicalFeed;
         })
       },
@@ -68,15 +69,17 @@ function showHamburgerLinks() {
         fetch('https://spreadsheets.google.com/feeds/list/1H5S6Vc-gCOCKLvQmfjfJmG2THtDb5Z_LQGaZJpWZQ4c/1/public/values?alt=json')
         .then(response => response.json())
         .then(data => {
-          const spookyFeed = data.feed.entry.map(entry => {
-            if (entry.gsx$danceability.$t < 0.7) {
+          let spookyFeed = data.feed.entry.map(entry => {
+            if (entry.gsx$danceability.$t < 0.6 && entry.gsx$energy.$t < 0.8) {
               return {
                 title: entry.gsx$songtitle.$t,
-                artist: entry.gsx$artist.$t
+                artist: entry.gsx$artist.$t,
+                energy: entry.gsx$energy.$t
               }
             } 
           })
           .filter(entry => entry !== undefined);
+          spookyFeed = spookyFeed.sort((a, b) => a.energy > b.energy ? 1: -1)
           this.spooky = spookyFeed;
         })
       }
