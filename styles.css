@@ -77,9 +77,7 @@ html, body {
     margin: 0;
 }
 
-
-/* AGGRESSIVE */
-#aggressive {
+#aggressive, #spooky {
     background: var(--secondary);
     color: white;
     display: flex;
@@ -88,13 +86,7 @@ html, body {
     height: 50vh;
 }
 
-.playlist-header-dark {
-    color: var(--main);
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-}
-
-.playlist-subheader-dark {
+.playlist-header {
     color: var(--main);
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -106,6 +98,7 @@ html, body {
 
 .playlist {
     flex-grow: 1;
+    font-family: 'Montserrat', sans-serif;
     overflow-y: scroll;
     width: 100%;
 }
@@ -114,4 +107,36 @@ html, body {
     border: 1px solid var(--main);
     margin: 0;
     padding: 10px;
+}
+
+/* WHIMSICAL */
+.playlist-header-light {
+    color: var(--secondary);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.song-light {
+    border: 1px solid var(--secondary);
+    margin: 0;
+    padding: 10px;
+}
+
+#whimsical {
+    background: var(--main);
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--main);
+    height: 5vh;
+}
+
+.footer-text {
+    margin: 0;
 }
