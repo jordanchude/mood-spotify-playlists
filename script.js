@@ -28,10 +28,22 @@ function showHamburgerLinks() {
         fetch('https://spreadsheets.google.com/feeds/list/1H5S6Vc-gCOCKLvQmfjfJmG2THtDb5Z_LQGaZJpWZQ4c/1/public/values?alt=json')
         .then(response => response.json())
         .then(data => {
+          // const aggressiveFeed = data.feed.entry.map(entry => {
+          //   return {
+              // title: entry.gsx$songtitle.$t,
+              // artist: entry.gsx$artist.$t
+          //   }
+          // })
+
           const aggressiveFeed = data.feed.entry.map(entry => {
-            return {
-              title: entry.gsx$songtitle.$t,
-              artist: entry.gsx$artist.$t
+            console.log("scanned");
+            if (entry.gsx$danceability.$t > 0.7) {
+              return {
+                title: entry.gsx$songtitle.$t,
+                artist: entry.gsx$artist.$t
+              }
+            } else {
+              return false;
             }
           })
           this.aggressive = aggressiveFeed;
