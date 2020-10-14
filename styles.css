@@ -133,8 +133,12 @@ html, body {
 
 /* FOOTER */
 .footer {
+    align-items: center;
     background-color: var(--main);
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
     height: 5vh;
+    justify-content: center;
 }
 
 .footer-text {
