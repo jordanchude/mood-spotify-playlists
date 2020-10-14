@@ -69,6 +69,8 @@ html, body {
     background: transparent;
     border: 1px solid var(--main);
     border-radius: 20px;
+    color: white;
+    text-shadow: 1px 1px var(--main);
     padding: 10px;
 }
 
@@ -89,7 +91,7 @@ html, body {
 .playlist-header {
     color: var(--main);
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
+    margin: 5px;
 }
 
 .playlist-photo {
@@ -100,7 +102,16 @@ html, body {
     flex-grow: 1;
     font-family: 'Montserrat', sans-serif;
     overflow-y: scroll;
+    margin: 5% 0 5% 0;
     width: 100%;
+}
+
+.dark {
+    border: 2px solid var(--main);
+}
+
+.light {
+    border: 2px solid var(--secondary);
 }
 
 .song-dark {
@@ -113,7 +124,7 @@ html, body {
 .playlist-header-light {
     color: var(--secondary);
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
+    margin: 5px;
 }
 
 .song-light {
