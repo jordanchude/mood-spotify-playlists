@@ -66,11 +66,10 @@ html, body {
 }
 
 .hero-button {
-    background: transparent;
-    border: 1px solid var(--main);
+    background: var(--main);
+    border-style: none;
     border-radius: 20px;
     color: var(--secondary);
-    text-shadow: 1px 1px var(--main);
     padding: 10px;
 }
 
@@ -91,19 +90,20 @@ html, body {
 .playlist-header {
     color: var(--main);
     font-family: 'Montserrat', sans-serif;
-    margin: 5px;
+    margin: 2px;
 }
 
 .playlist-photo {
-    width: 150px;
+    width: 120px;
 }
 
 .playlist {
     flex-grow: 1;
     font-family: 'Montserrat', sans-serif;
     overflow-y: scroll;
-    margin: 5% 0 5% 0;
+    margin: 2% 0 2% 0;
     width: 100%;
+    font-size: 12px;
 }
 
 .dark {
@@ -124,7 +124,7 @@ html, body {
 .playlist-header-light {
     color: var(--secondary);
     font-family: 'Montserrat', sans-serif;
-    margin: 5px;
+    margin: 2px;
 }
 
 .song-light {
