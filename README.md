@@ -28,24 +28,18 @@ In a single page application, Moodify is going to consume information about Spot
 - [MVP](https://res.cloudinary.com/dpjdvsigb/image/upload/v1602465106/moodify/moodify-mvp_l7n4mi.jpg)
 - [Post MVP](https://res.cloudinary.com/dpjdvsigb/image/upload/v1602465106/moodify/moodify-post-mvp_mbjtk0.jpg)
 
-### MVP/PostMVP - 5min
-
-The functionality will then be divided into two separate lists: MPV and PostMVP. Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
-
-#### MVP (examples)
-
+## MVP/Post MVP
+#### MVP
 - Pull data from google JSON API
 - Sort API data based on properties that signify mood
 - Present API data in three sorted playlists
 - Make interface mobile-first/responsive
 
-#### PostMVP 
-
+##### PostMVP 
 - Add fade-in effects to all page elements
 - Add hover styling to all buttons
 
 ## Functional Components
-
 #### MVP
 | Letter | Component | Priority | Estimated Time | Actual Time |
 | --- | --- | :---: |  :---: | :---: |
@@ -98,7 +92,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Test functions
 - Test responsiveness
 - Refactor, Test, Refactor, Test
-- Deploy, Test
+- Test deployed application
 
 ## Major Refactors
 - CSS
@@ -118,7 +112,59 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
         - With only 500 songs, if I removed songs once they were added to a playlist, the subsequent playlists may not hit 100 songs and/or have a playlist that isn't accurate to its title
 
 ## Code Snippet
+- The following code snippet is the crux of the application. In essence, the getSongs function takes the data from the JSON feed and organizes it into an array of objects using logic gates for specific properties. The subsequent arrays of objects are used to create each playlist.
 
-## Issues and Resolutions
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier           
-**RESOLUTION**: Missing comma after first object in sources {} object
+```js
+getSongs: function(){
+        // fetch data feed
+        fetch(this.URL)
+        // convert response to consumable JSON
+        .then(response => response.json())
+        .then(data => {
+          // create new object for each entry that matches if gates
+          data.feed.entry.map(entry => {
+            // Aggressive Logic Gates
+            if (entry.gsx$energy.$t > 0.65 && entry.gsx$valence.$t < 0.5) {
+              // add to 'aggressive' data property
+              this.aggressive.push({
+                title: entry.gsx$songtitle.$t,
+                artist: entry.gsx$artist.$t,
+                energy: entry.gsx$energy.$t
+              })
+            }
+
+            // Whimsical Logic Gates
+            if (entry.gsx$valence.$t > 0.35 && entry.gsx$instrumentalness.$t > 0 && entry.gsx$acousticness.$t > .1) {
+                // add to 'whimsical' data property
+                this.whimsical.push({
+                title: entry.gsx$songtitle.$t,
+                artist: entry.gsx$artist.$t,
+                valence: entry.gsx$valence.$t
+              })
+            }
+
+            // Spooky Logic Gates
+            if (entry.gsx$valence.$t < 0.52 && entry.gsx$energy.$t < 0.72 && entry.gsx$loudness.$t < -5.5 && entry.gsx$danceability.$t < .75) {
+              // add to 'spooky' data property
+              this.spooky.push({
+                title: entry.gsx$songtitle.$t,
+                artist: entry.gsx$artist.$t,
+                valence: entry.gsx$valence.$t
+              })
+            }
+          })
+
+          // filter out songs not placed in playlists
+          .filter(entry => entry !== undefined);
+
+          //sort playlists by key attribute and return new array with 100 entries
+          this.aggressive = this.aggressive.sort((a, b) => b.energy > a.energy ? 1: -1).splice(0, 100);
+          this.whimsical = this.whimsical.sort((a, b) => b.valence > a.valence ? 1: -1).splice(0, 100);
+          this.spooky = this.spooky.sort((a, b) => a.valence > b.valence ? 1: -1).splice(0, 100);
+        })
+      }
+```
+
+## Learning Moments / Issues and Resolutions
+**ERROR**: GET http://127.0.0.1:5500/function%20URL()%20%7B%20[native%20code]%20%7D 404 (Not Found)           
+**RESOLUTION**: In my getSongs function, I tried to fetch from the URL in my data object, but wrote "fetch(URL)", which fetches from the current URL, instead of referring to the data object with "fetch(this.URL)".
