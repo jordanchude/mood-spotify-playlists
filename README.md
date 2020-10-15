@@ -48,7 +48,7 @@ In a single page application, Moodify is going to consume information about Spot
 | C | Navigation HTML | H | .5hr | .5hr |
 | D | Navigation CSS | M | 1hr | .5hr |
 | E | Hero HTML | H | 1hr | .5hr |
-| F | Hero CSS | M | 1hr | 1.5hr |
+| F | Hero CSS | M | 1hr | .5hr |
 | G | Aggressive HTML | H | 1hr | .25hr |
 | H | Aggressive CSS | M | 1hr | .5hr | 
 | I | Whimsical HTML | H | 1hr | .25hr |
@@ -65,7 +65,7 @@ In a single page application, Moodify is going to consume information about Spot
 | T | Deployment | M | .25hr | .25hr |
 | U | Blackbox Testing/Debugging | H | 2hr | 2hr |
 | V | Documentation | H | .5hr | .25hr |
-| -- | Total | -- | 33.25hrs| 24hrs |
+| -- | Total | -- | 33.25hrs| 23hrs |
 
 #### PostMVP
 | Letter | Component | Priority | Estimated Time | Actual Time |
