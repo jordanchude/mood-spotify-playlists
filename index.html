@@ -48,7 +48,7 @@
 
     <!-- HERO -->
     <section class="hero">
-        <div class="hero-content">
+        <div class="center">
             <h1 class="moodify-hero">Moodify</h1>
             <a href="#aggressive" class="hero-button">Aggressive</a>
             <a href="#whimsical" class="hero-button">Whimsical</a>
@@ -60,46 +60,46 @@
     <!-- Vue Instance -->
     <div id="app">
         <!-- Aggressive -->
-        <section id="aggressive">
-            <div class="playlist-intro">
-                <h1 class="playlist-header">Aggressive</h1>
-                <h4 class="playlist-header">Get Hype</h2>
+        <section id="aggressive" class="playlist-section">
+            <div class="playlist-intro center">
+                <h1 class="playlist-header text-main">Aggressive</h1>
+                <h4 class="playlist-header text-main">Get Hype</h2>
                 <img class="playlist-photo" src="https://res.cloudinary.com/dpjdvsigb/image/upload/v1602631355/moodify/philipp-pilz-QZ2EQuPpQJs-unsplash_nsfb4g.png" alt="aggressive-wolf">
             </div>
-            <div class="playlist dark">
+            <div class="playlist dark-border">
                 <div v-for="song in aggressive">
                     <!-- Populate section with Vue 'aggressive' data property -->
-                    <p class="song-dark">"{{song.title}}" - {{song.artist}}</p>
+                    <p class="song">"{{song.title}}" - {{song.artist}}</p>
                 </div>
             </div>
         </section>
 
         <!-- Whimsical -->
-        <section id="whimsical">
-            <div class="playlist-intro">
-                <h1 class="playlist-header-light">Whimsical</h1>
-                <h4 class="playlist-header-light">Get Loose</h2>
+        <section id="whimsical" class="playlist-section">
+            <div class="playlist-intro center">
+                <h1 class="playlist-header text-secondary">Whimsical</h1>
+                <h4 class="playlist-header text-secondary">Get Loose</h2>
                 <img class="playlist-photo" src="https://res.cloudinary.com/dpjdvsigb/image/upload/v1602631215/moodify/daniel-maas-RR-FwGB6PEU-unsplash_ccf2p3.png" alt="whimsical-dog">
             </div>
-            <div class="playlist light">
+            <div class="playlist light-border">
                 <div v-for="song in whimsical">
                     <!-- Populate section with Vue 'whimsical' data property -->
-                    <p class="song-light">"{{song.title}}" - {{song.artist}}</p>
+                    <p class="song">"{{song.title}}" - {{song.artist}}</p>
                 </div>
             </div>
         </section>
 
         <!-- Spooky -->
-        <section id="spooky">
-            <div class="playlist-intro">
-                <h1 class="playlist-header">Spooky</h1>
-                <h4 class="playlist-header">Get Spooked</h2>
+        <section id="spooky" class="playlist-section">
+            <div class="playlist-intro center">
+                <h1 class="playlist-header text-main">Spooky</h1>
+                <h4 class="playlist-header text-main">Get Spooked</h2>
                 <img class="playlist-photo" src="https://res.cloudinary.com/dpjdvsigb/image/upload/v1602631416/moodify/sarah-boudreau-Uy70zMCw-4c-unsplash_dwtuth.png" alt="spooky-dog">
             </div>
-            <div class="playlist dark">
+            <div class="playlist dark-border">
                 <div v-for="song in spooky">
                     <!-- Populate section with Vue 'spooky' data property -->
-                    <p class="song-dark">"{{song.title}}" - {{song.artist}}</p>
+                    <p class="song">"{{song.title}}" - {{song.artist}}</p>
                 </div>
             </div>
         </section>

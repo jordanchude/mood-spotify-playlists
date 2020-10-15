@@ -57,8 +57,12 @@ html, body {
     height: 50vh;
 }
 
-.hero-content {
+.center {
     text-align: center;
+}
+
+.playlist-intro {
+    width: 50%;
 }
 
 .hero-button {
@@ -80,27 +84,20 @@ html, body {
 
 /* DARK PLAYLISTS */
 
-#aggressive, #spooky {
-    background: var(--secondary);
-    color: white;
+.playlist-section {
     display: flex;
     align-items: center;
     flex-direction: column;
     height: 70vh;
 }
 
-.playlist-intro {
-    text-align: center;
-}
-
-.playlist-header {
-    color: var(--main);
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
+#aggressive, #spooky {
+    background: var(--secondary);
+    color: white;
 }
 
 .playlist-photo {
-    width: 40%;
+    width: 65%;
 }
 
 .playlist {
@@ -112,40 +109,37 @@ html, body {
     font-size: .7rem;
 }
 
-.dark {
+.dark-border {
     border: 2px solid var(--main);
 }
 
-.light {
+.light-border {
     border: 2px solid var(--secondary);
 }
 
-.song-dark {
+.song {
     border-bottom: 1px solid white;
     margin: 0;
     padding: 1rem;
 }
 
 /* WHIMSICAL */
-.playlist-header-light {
-    color: var(--secondary);
+.playlist-header {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
 
-.song-light {
-    border-bottom: 1px solid white;
-    margin: 0;
-    padding: 1rem;
+.text-main {
+    color: var(--main);
+}
+
+.text-secondary {
+    color: var(--secondary);
 }
 
 #whimsical {
     background: var(--main);
     color: black;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 70vh;
 }
 
 /* FOOTER */
@@ -173,12 +167,8 @@ html, body {
         font-size: 1rem;
     }
 
-    .playlist-header, .playlist-header-light {
+    .playlist-header {
         margin-bottom: .75rem;
-    }
-    
-    .playlist-photo {
-        width: 30%;
     }
 
     .playlist {
@@ -203,19 +193,8 @@ html, body {
         font-size: 1.25rem;
     }
 
-    #aggressive, #spooky {
+    .playlist-section {
         align-items: center;
-        background: var(--secondary);
-        color: white;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        height: 100vh;
-    }
-
-    #whimsical {
-        background: var(--main);
-        color: black;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -224,19 +203,11 @@ html, body {
 
     .playlist {
         height: 80vh;
-        width: 50vh;
+        width: 40%;
         flex-grow: 0;
     }
 
-    .playlist-intro {
-        width: 50vw;
-    }
-
-    .playlist-photo {
-        width: 50%;
-    }
-
-    .playlist-header, .playlist-header-light {
+    .playlist-header {
         transform: scale(1.5);
         margin-bottom: 1rem;
     }
