@@ -57,6 +57,7 @@
     </section>
 
     <!-- PLAYLISTS -->
+    <!-- Vue Instance -->
     <div id="app">
         <!-- Aggressive -->
         <section id="aggressive">
@@ -67,11 +68,13 @@
             </div>
             <div class="playlist dark">
                 <div v-for="song in aggressive">
+                    <!-- Populate section with Vue 'aggressive' data property -->
                     <p class="song-dark">"{{song.title}}" - {{song.artist}}</p>
                 </div>
             </div>
         </section>
 
+        <!-- Whimsical -->
         <section id="whimsical">
             <div class="playlist-intro">
                 <h1 class="playlist-header-light">Whimsical</h1>
@@ -80,11 +83,13 @@
             </div>
             <div class="playlist light">
                 <div v-for="song in whimsical">
+                    <!-- Populate section with Vue 'whimsical' data property -->
                     <p class="song-light">"{{song.title}}" - {{song.artist}}</p>
                 </div>
             </div>
         </section>
 
+        <!-- Spooky -->
         <section id="spooky">
             <div class="playlist-intro">
                 <h1 class="playlist-header">Spooky</h1>
@@ -93,11 +98,13 @@
             </div>
             <div class="playlist dark">
                 <div v-for="song in spooky">
+                    <!-- Populate section with Vue 'spooky' data property -->
                     <p class="song-dark">"{{song.title}}" - {{song.artist}}</p>
                 </div>
             </div>
         </section>
     </div>
+
     <!-- FOOTER -->
     <footer class="footer">
         <p class="footer-text">© Moodify 2020</p>

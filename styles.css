@@ -27,10 +27,10 @@ html, body {
 
 .nav a {
     color: white;
-    padding: 14px 16px;
+    padding: 1.25rem 1.5rem;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
+    font-size: 1em;
     display: block;
 }
 
@@ -43,22 +43,17 @@ html, body {
     top: 0;
 }
 
-/* .nav a:hover {
-    background-color: #ddd;
-    color: black;
-} */
-
 .moodify-nav {
     font-family: 'Prompt', sans-serif;
 }
 
 /* HERO */
 .hero {
-    display: flex;
     align-items: center;
-    justify-content: center;
     background: url(https://images.unsplash.com/photo-1458560871784-56d23406c091?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2767&q=80);
     background-size: cover;
+    display: flex;
+    justify-content: center;
     height: 40vh;
 }
 
@@ -72,14 +67,16 @@ html, body {
     border-radius: 20px;
     color: var(--secondary);
     font-family: 'Montserrat', sans-serif;
-    font-size: 10px;
+    font-size: .75rem;
     text-decoration: none;
-    padding: 10px;
+    padding: 1rem;
 }
 
 .moodify-hero {
     font-family: 'Prompt', sans-serif;
 }
+
+/* DARK PLAYLISTS */
 
 #aggressive, #spooky {
     background: var(--secondary);
@@ -97,20 +94,20 @@ html, body {
 .playlist-header {
     color: var(--main);
     font-family: 'Montserrat', sans-serif;
-    margin: 2px;
+    margin: .2rem;
 }
 
 .playlist-photo {
-    width: 120px;
+    width: 9rem;
 }
 
 .playlist {
     flex-grow: 1;
     font-family: 'Montserrat', sans-serif;
     overflow-y: scroll;
-    margin: 2% 0 2% 0;
-    width: 100%;
-    font-size: 12px;
+    margin: .5rem 0 .5rem 0;
+    width: 99%;
+    font-size: .7rem;
 }
 
 .dark {
@@ -122,22 +119,22 @@ html, body {
 }
 
 .song-dark {
-    border: 1px solid var(--main);
+    border-bottom: 1px solid white;
     margin: 0;
-    padding: 10px;
+    padding: 1rem;
 }
 
 /* WHIMSICAL */
 .playlist-header-light {
     color: var(--secondary);
     font-family: 'Montserrat', sans-serif;
-    margin: 2px;
+    margin: .2rem;
 }
 
 .song-light {
-    border: 1px solid var(--secondary);
+    border-bottom: 1px solid white;
     margin: 0;
-    padding: 10px;
+    padding: 1rem;
 }
 
 #whimsical {
@@ -165,12 +162,21 @@ html, body {
 
 /* TABLET MEDIA QUERY */
 @media only screen and (min-width: 768px) {
+    .moodify-hero {
+        font-size: 3rem;
+        margin: .5rem;
+    }
+
+    .hero-button {
+        font-size: 1rem;
+    }
+    
     .playlist-photo {
-        width: 210px;
+        width: 30%;
     }
 
     .playlist {
-        font-size: 15px;
+        font-size: 1rem;
     }
 }
 
@@ -183,12 +189,12 @@ html, body {
     }
 
     .moodify-hero {
-        font-size: 100px;
-        margin: 0;
+        font-size: 5rem;
+        margin: .2rem;
     }
 
     .hero-button {
-        font-size: 20px;
+        font-size: 1rem;
     }
 
     #aggressive, #spooky {
@@ -216,12 +222,16 @@ html, body {
         flex-grow: 0;
     }
 
+    .playlist-intro {
+        width: 50vw;
+    }
+
     .playlist-photo {
-        width: 500px;
+        width: 50%;
     }
 
     .playlist-header, .playlist-header-light {
         transform: scale(1.5);
-        margin: 30px;
+        margin: 1rem;
     }
 }
