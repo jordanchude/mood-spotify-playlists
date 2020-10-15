@@ -8,9 +8,9 @@
 |---|---| ---|
 |Day 1| Project Description | Complete
 |Day 1| Wireframes / Priority Matrix / Timeline | Complete
-|Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Day 4| MVP & Bug Fixes | Incomplete
-|Day 5| Final Touches | Incomplete
+|Day 3| Core Application Structure (HTML, CSS, etc.) | Complete
+|Day 4| MVP & Bug Fixes | Complete
+|Day 5| Final Touches | Complete
 |Day 6| Deliver | Incomplete
 
 
@@ -65,8 +65,10 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 | N | Vue JS Implementation | H | 2hr | -hr |
 | O | Responsive Testing/Debugging | H | 4hr | -hr |
 | P | API Pull Testing/Debugging | H | 4hr | -hr |
-| Q | Blackbox Testing | H | 2hr | -hr |
-| -- | Total | -- | 30hrs| -hrs |
+| Q | Refactoring | H | 4hr | -hr |
+| R | Deployment | H | 2hr | -hr |
+| S | Blackbox Testing | H | 2hr | -hr |
+| -- | Total | -- | 34hrs| -hrs |
 
 #### PostMVP
 | Letter | Component | Priority | Estimated Time | Actual Time |
@@ -75,9 +77,45 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 | B | Button hover styling | L | .5hr | -hr |
 | -- | Total | -- | 1.5hrs| -hrs |
 
-## Additional Libraries
-- [Vue.js](https://vuejs.org/) : I decided to use Vue.js because I wanted to easily pull in the data from the Google Sheets API without much code. I've done it before with jQuery, but Vue's infrastructure makes it much easier to fetch data, in my opinion.
+## Additional Frameworks/Libraries
+- [Vue.js](https://vuejs.org/): I decided to use Vue.js because I wanted to easily pull in the data from the Google Sheets API without much code. I've done it before with jQuery, but Vue's infrastructure, in my opinion, makes it much easier to fetch data and display it on the page.
+- [Google Fonts](https://fonts.google.com/): I used Google Fonts to customize the fonts on the web page.
+- [Font Awesome](https://fontawesome.com/): I used Font Awesome for the hamburger menu.
 - I didn't use any other frameworks because using frameworks generally makes websites a little slower (because there's so much to load) and I only wanted to use what was necessary and be strategic.
+
+## High-Level Process
+- Look for UI inspiration (i.e. via UIGarage.net)
+- Create wireframes/mocks
+    - Make mocks as close to desired live website prior to coding (i.e. including styling and assets)
+- Identify major functions of app
+    - Fetch JSON Data
+    - Sort JSON data by properties
+    - Limit playlists to 100 songs
+- Identify necessary methods/processes for building interface
+    - Mobile-first
+- Build rough HTML/CSS for each section
+- Create major functions
+- Test functions
+- Test responsiveness
+- Refactor, Test, Refactor, Test
+- Deploy, Test
+
+## Major Refactors
+- CSS
+    - Converted pixels to REMs for better accessibility
+    - Removed redundant code across classes
+- Javascript
+    - Refactored three functions, one for each playlist, into one function with one fetch request for better efficiency
+
+## Major CSS/JS Decisions
+- CSS
+    - There are a solid amount of classes 
+        - I avoided global variables, when possible, so any added elements aren't affected
+        - I used classes instead of IDs, except for navigable sections, for flexibility for any future iterations where I may need to re-use the class
+- JS
+    - Songs can be in more than one playlists
+        - A few of these songs are aggressive and spooky, or aggressive and whimsical
+        - With only 500 songs, if I removed songs once they were added to a playlist, the subsequent playlists may not hit 100 songs and/or have a playlist that isn't accurate to its title
 
 ## Code Snippet
 
