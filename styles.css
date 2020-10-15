@@ -14,6 +14,27 @@ html, body {
     scroll-behavior: smooth;
 }
 
+/* MULTI-SECTION */
+.center {
+    text-align: center;
+}
+
+.dark-border {
+    border: 2px solid var(--main);
+}
+
+.light-border {
+    border: 2px solid var(--secondary);
+}
+
+.text-main {
+    color: var(--main);
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
 /* NAVIGATION */
 .nav {
     overflow: hidden;
@@ -57,14 +78,6 @@ html, body {
     height: 50vh;
 }
 
-.center {
-    text-align: center;
-}
-
-.playlist-intro {
-    width: 50%;
-}
-
 .hero-button {
     background: var(--main);
     border-style: none;
@@ -82,7 +95,17 @@ html, body {
     margin: 0;
 }
 
-/* DARK PLAYLISTS */
+
+/* PLAYLISTS */
+#aggressive, #spooky {
+    background: var(--secondary);
+    color: white;
+}
+
+#whimsical {
+    background: var(--main);
+    color: black;
+}
 
 .playlist-section {
     display: flex;
@@ -91,9 +114,13 @@ html, body {
     height: 70vh;
 }
 
-#aggressive, #spooky {
-    background: var(--secondary);
-    color: white;
+.playlist-intro {
+    width: 50%;
+}
+
+.playlist-header {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
 }
 
 .playlist-photo {
@@ -110,37 +137,10 @@ html, body {
     font-size: .7rem;
 }
 
-.dark-border {
-    border: 2px solid var(--main);
-}
-
-.light-border {
-    border: 2px solid var(--secondary);
-}
-
 .song {
     border-bottom: 1px solid white;
     margin: 0;
     padding: 1rem;
-}
-
-/* WHIMSICAL */
-.playlist-header {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-}
-
-.text-main {
-    color: var(--main);
-}
-
-.text-secondary {
-    color: var(--secondary);
-}
-
-#whimsical {
-    background: var(--main);
-    color: black;
 }
 
 /* FOOTER */
@@ -159,6 +159,7 @@ html, body {
 
 /* TABLET MEDIA QUERY */
 @media only screen and (min-width: 768px) {
+    /* Hero */
     .moodify-hero {
         font-size: 3rem;
         margin: .5rem;
@@ -168,6 +169,7 @@ html, body {
         font-size: 1rem;
     }
 
+    /* Playlists */
     .playlist-header {
         margin-bottom: .75rem;
     }
@@ -178,9 +180,8 @@ html, body {
 }
 
 /* DESKTOP MEDIA QUERY */
-
 @media only screen and (min-width: 992px) {
-    
+    /* Hero */
     .hero {
         height: 90vh;
     }
@@ -194,6 +195,7 @@ html, body {
         font-size: 1.25rem;
     }
 
+    /* Playlists */
     .playlist-section {
         align-items: center;
         display: flex;
@@ -202,14 +204,14 @@ html, body {
         height: 100vh;
     }
 
+    .playlist-header {
+        transform: scale(1.5);
+        margin-bottom: 1rem;
+    }
+
     .playlist {
         height: 80vh;
         width: 40%;
         flex-grow: 0;
-    }
-
-    .playlist-header {
-        transform: scale(1.5);
-        margin-bottom: 1rem;
     }
 }
