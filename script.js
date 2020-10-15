@@ -46,7 +46,7 @@ function showHamburgerLinks() {
               })
             }
 
-            if (entry.gsx$valence.$t < 0.5 && entry.gsx$energy.$t < 0.7 && entry.gsx$danceability.$t < .75) {
+            if (entry.gsx$valence.$t < 0.52 && entry.gsx$energy.$t < 0.72 && entry.gsx$loudness.$t < -5.5 && entry.gsx$danceability.$t < .75) {
               this.spooky.push({
                 title: entry.gsx$songtitle.$t,
                 artist: entry.gsx$artist.$t,
