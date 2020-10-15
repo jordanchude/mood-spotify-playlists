@@ -70,9 +70,9 @@ In a single page application, Moodify is going to consume information about Spot
 #### PostMVP
 | Letter | Component | Priority | Estimated Time | Actual Time |
 | --- | --- |  :---: | :---: | :---: |
-| A | Element fade-in | L | 1hr | -hr |
-| B | Button hover styling | L | .5hr | -hr |
-| -- | Total | -- | 1.5hrs| -hrs |
+| A | Element fade-in | L | 1hr | 1hr |
+| B | Button hover styling | L | .5hr | .25hr |
+| -- | Total | -- | 1.5hrs| .25hrs |
 
 ## Additional Frameworks/Libraries
 - [Vue.js](https://vuejs.org/): I decided to use Vue.js because I wanted to easily pull in the data from the Google Sheets API without much code. I've done it before with jQuery, but Vue's infrastructure, in my opinion, makes it much easier to fetch data and display it on the page.

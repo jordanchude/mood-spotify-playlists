@@ -35,6 +35,18 @@ html, body {
     color: var(--secondary);
 }
 
+.fade-out {
+    opacity: 0;
+    transform: translate(0, 20px); 
+    transition: all 1.5s;  
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translate(0, 0); 
+    transition: all 1.5s;  
+}
+
 /* NAVIGATION */
 .nav {
     overflow: hidden;
@@ -87,6 +99,12 @@ html, body {
     font-size: .6rem;
     text-decoration: none;
     padding: .75rem;
+}
+
+.hero-button:hover {
+    background: var(--secondary);
+    color: var(--main);
+    transition-duration: .2s;
 }
 
 .moodify-hero {

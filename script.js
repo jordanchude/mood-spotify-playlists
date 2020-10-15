@@ -77,3 +77,30 @@ function showHamburgerLinks() {
       }
     }
   })
+
+  // FADE IN / FADE OUT
+  let options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.25
+  };
+  
+  let callback = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // fade in
+        entry.target.classList.replace('fade-out', 'fade-in');
+      } else {
+        // fade out
+        entry.target.classList.replace('fade-in', 'fade-out');
+      }
+    });
+  }
+  // select elements to fade
+  const fadeElements = document.querySelectorAll('.fade');
+
+  // new intersection observer
+  const observer = new IntersectionObserver(callback, options);
+
+  // observe all fade elements
+  fadeElements.forEach(element => observer.observe(element));
