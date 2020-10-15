@@ -75,7 +75,7 @@ In a single page application, Moodify is going to consume information about Spot
 | -- | Total | -- | 1.5hrs| 1.25hrs |
 
 ## Additional Frameworks/Libraries
-- [Vue.js](https://vuejs.org/): I decided to use Vue.js because I wanted to easily pull in the data from the Google Sheets API without much code. I've done it before with jQuery, but Vue's infrastructure, in my opinion, makes it much easier to fetch data and display it on the page.
+- [Vue.js](https://vuejs.org/): I decided to use Vue.js because I wanted to easily pull in the data from the Google Sheets API without much code. I've done it before with jQuery, but Vue's infrastructure, in my opinion, makes it much easier to fetch data and display it on the page. The production version is still being called, in case you want to play around with my code see what the console says, when you do.
 - [Google Fonts](https://fonts.google.com/): I used Google Fonts to customize the fonts on the web page.
 - [Font Awesome](https://fontawesome.com/): I used Font Awesome for the hamburger menu.
 - I didn't use any other frameworks because using frameworks generally makes websites a little slower (because there's so much to load) and I only wanted to use what was necessary and be strategic.
