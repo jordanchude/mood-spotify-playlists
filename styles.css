@@ -54,7 +54,7 @@ html, body {
     background-size: cover;
     display: flex;
     justify-content: center;
-    height: 40vh;
+    height: 50vh;
 }
 
 .hero-content {
@@ -74,6 +74,8 @@ html, body {
 
 .moodify-hero {
     font-family: 'Prompt', sans-serif;
+    font-size: 2.5em;
+    margin: 0;
 }
 
 /* DARK PLAYLISTS */
@@ -84,7 +86,7 @@ html, body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 50vh;
+    height: 70vh;
 }
 
 .playlist-intro {
@@ -94,11 +96,11 @@ html, body {
 .playlist-header {
     color: var(--main);
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: .2rem;
+    margin: 0;
 }
 
 .playlist-photo {
-    width: 30%;
+    width: 40%;
 }
 
 .playlist {
@@ -128,7 +130,7 @@ html, body {
 .playlist-header-light {
     color: var(--secondary);
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: .2rem;
+    margin: 0;
 }
 
 .song-light {
@@ -143,7 +145,7 @@ html, body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 50vh;
+    height: 70vh;
 }
 
 /* FOOTER */
@@ -169,6 +171,10 @@ html, body {
 
     .hero-button {
         font-size: 1rem;
+    }
+
+    .playlist-header, .playlist-header-light {
+        margin-bottom: .75rem;
     }
     
     .playlist-photo {
