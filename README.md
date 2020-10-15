@@ -16,7 +16,7 @@
 
 ## Project Description
 
-In a single page application, Moodify is going to consume information about Spotify songs and present to the user three, 100 song playlists curated for three emotions: aggressive, whimsical, and spooky.
+In a single page application, Moodify is going to consume information about Spotify songs and present to the user three, 100-song playlists curated for three emotions: aggressive, whimsical, and spooky.
 
 ## Wireframes
 
@@ -91,8 +91,8 @@ In a single page application, Moodify is going to consume information about Spot
 - Identify necessary methods/processes for building interface
     - Mobile-first
 - Build rough HTML/CSS for each section
-- Create major functions
-- Test functions
+- Create major function(s) in Javascript
+- Test function(s)
 - Test responsiveness
 - Refactor, Test, Refactor, Test
 - Test deployed application
@@ -107,7 +107,7 @@ In a single page application, Moodify is going to consume information about Spot
 ## Major CSS/JS Decisions
 - CSS
     - There are a solid amount of classes 
-        - I avoided global variables, when possible, so any added elements aren't affected
+        - I avoided global variables, when possible, so any added elements in subsequent versions aren't effected
         - I used classes instead of IDs, except for navigable sections, for flexibility for any future iterations where I may need to re-use the class
 - JS
     - Songs can be in more than one playlists
@@ -115,7 +115,7 @@ In a single page application, Moodify is going to consume information about Spot
         - With only 500 songs, if I removed songs once they were added to a playlist, the subsequent playlists may not hit 100 songs and/or have a playlist that isn't accurate to its title
 
 ## Code Snippet
-- The following code snippet is the crux of the application. In essence, the getSongs function takes the data from the JSON feed and organizes it into an array of objects using logic gates for specific properties. The subsequent arrays of objects are used to create each playlist.
+- The following code snippet is the crux of the application. In essence, the getSongs function takes the data from the JSON feed and organizes it into an array of objects using logic gates for specific property values. The subsequent arrays of objects are used to create each playlist.
 
 ```js
 getSongs: function(){
@@ -170,4 +170,4 @@ getSongs: function(){
 
 ## Learning Moments / Issues and Resolutions
 **ERROR**: GET http://127.0.0.1:5500/function%20URL()%20%7B%20[native%20code]%20%7D 404 (Not Found)           
-**RESOLUTION**: In my getSongs function, I tried to fetch from the URL in my data object, but wrote "fetch(URL)", which fetches from the current URL, instead of referring to the data object with "fetch(this.URL)".
+**RESOLUTION**: In my getSongs function, I tried to fetch from the URL in my data object, but wrote "fetch(URL)", which tried to fetch from the current URL instead of referring to the data object with "fetch(this.URL)".
