@@ -67,9 +67,9 @@ html, body {
     border-radius: 20px;
     color: var(--secondary);
     font-family: 'Montserrat', sans-serif;
-    font-size: .75rem;
+    font-size: .6rem;
     text-decoration: none;
-    padding: 1rem;
+    padding: .75rem;
 }
 
 .moodify-hero {
@@ -94,11 +94,11 @@ html, body {
 .playlist-header {
     color: var(--main);
     font-family: 'Montserrat', sans-serif;
-    margin: .2rem;
+    margin-bottom: .2rem;
 }
 
 .playlist-photo {
-    width: 9rem;
+    width: 30%;
 }
 
 .playlist {
@@ -128,7 +128,7 @@ html, body {
 .playlist-header-light {
     color: var(--secondary);
     font-family: 'Montserrat', sans-serif;
-    margin: .2rem;
+    margin-bottom: .2rem;
 }
 
 .song-light {
@@ -194,7 +194,7 @@ html, body {
     }
 
     .hero-button {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     #aggressive, #spooky {
@@ -232,6 +232,6 @@ html, body {
 
     .playlist-header, .playlist-header-light {
         transform: scale(1.5);
-        margin: 1rem;
+        margin-bottom: 1rem;
     }
 }
