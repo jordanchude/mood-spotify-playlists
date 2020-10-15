@@ -25,13 +25,13 @@ In a single page application, Moodify is going to consume information about Spot
 - [Desktop](https://www.dropbox.com/s/01sj4k2spj6e3e8/desktop.pdf?dl=0)
 
 ## Time/Priority Matrix 
-- [MVP](https://res.cloudinary.com/dpjdvsigb/image/upload/v1602465106/moodify/moodify-mvp_l7n4mi.jpg)
+- [MVP](https://res.cloudinary.com/dpjdvsigb/image/upload/v1602797550/moodify/moodify-mvp_hf3w2u.jpg)
 - [Post MVP](https://res.cloudinary.com/dpjdvsigb/image/upload/v1602465106/moodify/moodify-post-mvp_mbjtk0.jpg)
 
 ## MVP/Post MVP
 #### MVP
 - Pull data from google JSON API
-- Sort API data based on properties that signify mood
+- Sort API data based on property values that signify mood
 - Present API data in three sorted playlists
 - Make interface mobile-first/responsive
 
@@ -39,30 +39,33 @@ In a single page application, Moodify is going to consume information about Spot
 - Add fade-in effects to all page elements
 - Add hover styling to all buttons
 
-## Functional Components
+## Functional Components (Rounded to Nearest .25hr)
 #### MVP
 | Letter | Component | Priority | Estimated Time | Actual Time |
 | --- | --- | :---: |  :---: | :---: |
-| A | UI/UX Research | H | 1hr | .5hr |
-| B | Wireframing | H | 2hr | 3hr |
-| C | Navigation HTML | H | 1hr | -hr |
-| D | Navigation CSS | M | 2hr | -hr |
-| E | Aggressive HTML | H | 1hr | -hr |
-| F | Aggressive CSS | M | 3hr | -hr | 
-| G | Whimsical HTML | H | 1hr | 2hr |
-| H | Whimsical CSS | M | 2hr | 2hr | 
-| I | Spooky HTML | H | 1hr | -hr |
-| J | Spooky CSS | M | 2hr | -hr |
-| K | Footer HTML | H | .5hr | -hr |
-| L | Footer CSS | M | .5hr | -hr |
-| M | API Pull Javascript Function | H | 3hr | -hr |
-| N | Vue JS Implementation | H | 2hr | -hr |
-| O | Responsive Testing/Debugging | H | 4hr | -hr |
-| P | API Pull Testing/Debugging | H | 4hr | -hr |
-| Q | Refactoring | H | 4hr | -hr |
-| R | Deployment | H | 2hr | -hr |
-| S | Blackbox Testing | H | 2hr | -hr |
-| -- | Total | -- | 34hrs| -hrs |
+| A | UI/UX Research | H | 1hr | 1hr |
+| B | Wireframing | H | 2hr | 3.25hr |
+| C | Navigation HTML | H | .5hr | .5hr |
+| D | Navigation CSS | M | 1hr | .5hr |
+| E | Hero HTML | H | 1hr | .5hr |
+| F | Hero CSS | M | 1hr | 1.5hr |
+| G | Aggressive HTML | H | 1hr | .25hr |
+| H | Aggressive CSS | M | 1hr | .5hr | 
+| I | Whimsical HTML | H | 1hr | .25hr |
+| J | Whimsical CSS | M | 1hr | .25hr | 
+| K | Spooky HTML | H | 1hr | .25hr |
+| L | Spooky CSS | M | 1hr | .25hr |
+| M | Footer HTML | H | .5hr | .25hr |
+| N | Footer CSS | M | .5hr | .25hr |
+| O | API Pull Javascript Function | H | 3hr | 1hr |
+| P | Vue JS Implementation | H | 2hr | 1hr |
+| Q | Responsive Testing/Debugging | H | 4hr | 3.5hr |
+| R | API Pull Testing/Debugging | H | 4hr | 4hr |
+| S | Refactoring | H | 4hr | 2.5hr |
+| T | Deployment | M | .25hr | .25hr |
+| U | Blackbox Testing/Debugging | H | 2hr | 2hr |
+| V | Documentation | H | .5hr | .25hr |
+| -- | Total | -- | 33.25hrs| 24hrs |
 
 #### PostMVP
 | Letter | Component | Priority | Estimated Time | Actual Time |
@@ -83,7 +86,7 @@ In a single page application, Moodify is going to consume information about Spot
     - Make mocks as close to desired live website prior to coding (i.e. including styling and assets)
 - Identify major functions of app
     - Fetch JSON Data
-    - Sort JSON data by properties
+    - Sort JSON data by property values
     - Limit playlists to 100 songs
 - Identify necessary methods/processes for building interface
     - Mobile-first
