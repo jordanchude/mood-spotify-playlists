@@ -22,65 +22,43 @@ function showHamburgerLinks() {
       spooky: []
     },
     mounted: function () {
-      this.aggressiveSongs()
-      this.whimsicalSongs()
-      this.spookySongs()
+      this.getSongs()
     },
     methods: {
-      aggressiveSongs: function(){
+      getSongs: function(){
         fetch(this.URL)
         .then(response => response.json())
         .then(data => {
-          let aggressiveFeed = data.feed.entry.map(entry => {
+          data.feed.entry.map(entry => {
             if (entry.gsx$energy.$t > 0.65 && entry.gsx$valence.$t < 0.5) {
-              return {
+              this.aggressive.push({
                 title: entry.gsx$songtitle.$t,
                 artist: entry.gsx$artist.$t,
                 energy: entry.gsx$energy.$t
-              }
-            } 
+              })
+            }
+            
+            if (entry.gsx$valence.$t > 0.35 && entry.gsx$instrumentalness.$t > 0 && entry.gsx$acousticness.$t > .1) {
+                this.whimsical.push({
+                title: entry.gsx$songtitle.$t,
+                artist: entry.gsx$artist.$t,
+                valence: entry.gsx$valence.$t
+              })
+            }
+
+            if (entry.gsx$valence.$t < 0.5 && entry.gsx$energy.$t < 0.7 && entry.gsx$danceability.$t < .75) {
+              this.spooky.push({
+                title: entry.gsx$songtitle.$t,
+                artist: entry.gsx$artist.$t,
+                valence: entry.gsx$valence.$t
+              })
+            }
           })
           .filter(entry => entry !== undefined);
           // sort by energy and make new array with the first 100 songs
-          aggressiveFeed = aggressiveFeed.sort((a, b) => b.energy > a.energy ? 1: -1).splice(0, 100);
-          // assign array to 'aggressive' data property
-          this.aggressive = aggressiveFeed
-        })
-      },
-      whimsicalSongs: function(){
-        fetch('https://spreadsheets.google.com/feeds/list/1H5S6Vc-gCOCKLvQmfjfJmG2THtDb5Z_LQGaZJpWZQ4c/1/public/values?alt=json')
-        .then(response => response.json())
-        .then(data => {
-          let whimsicalFeed = data.feed.entry.map(entry => {
-            if (entry.gsx$valence.$t > 0.35 && entry.gsx$instrumentalness.$t > 0 && entry.gsx$acousticness.$t > .1) {
-              return {
-                title: entry.gsx$songtitle.$t,
-                artist: entry.gsx$artist.$t,
-                valence: entry.gsx$valence.$t
-              }
-            } 
-          })
-          .filter(entry => entry !== undefined);
-          whimsicalFeed = whimsicalFeed.sort((a, b) => b.valence > a.valence ? 1: -1);
-          this.whimsical = whimsicalFeed;
-        })
-      },
-      spookySongs: function(){
-        fetch('https://spreadsheets.google.com/feeds/list/1H5S6Vc-gCOCKLvQmfjfJmG2THtDb5Z_LQGaZJpWZQ4c/1/public/values?alt=json')
-        .then(response => response.json())
-        .then(data => {
-          let spookyFeed = data.feed.entry.map(entry => {
-            if (entry.gsx$valence.$t < 0.5 && entry.gsx$energy.$t < 0.7 && entry.gsx$danceability.$t < .75) {
-              return {
-                title: entry.gsx$songtitle.$t,
-                artist: entry.gsx$artist.$t,
-                valence: entry.gsx$valence.$t
-              }
-            } 
-          })
-          .filter(entry => entry !== undefined);
-          spookyFeed = spookyFeed.sort((a, b) => a.valence > b.valence ? 1: -1)
-          this.spooky = spookyFeed;
+          this.aggressive = this.aggressive.sort((a, b) => b.energy > a.energy ? 1: -1).splice(0, 100);
+          this.whimsical = this.whimsical.sort((a, b) => b.valence > a.valence ? 1: -1).splice(0, 100);
+          this.spooky = this.spooky.sort((a, b) => a.valence > b.valence ? 1: -1).splice(0, 100);
         })
       }
     }
